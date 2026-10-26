@@ -1,0 +1,104 @@
+{
+  "product": "Minds Studio",
+  "url": "https://minds.email",
+  "observed_at": "2026-10-26",
+  "provenance": "independent authenticated UI walkthrough",
+  "features": [
+    {
+      "id": "email_identity",
+      "name": "Email-first agent identity",
+      "status": "observed",
+      "purpose": "Address and delegate to persistent Minds"
+    },
+    {
+      "id": "multi_account",
+      "name": "Multiple accounts",
+      "status": "observed",
+      "purpose": "Unify personal and work identities"
+    },
+    {
+      "id": "passwordless",
+      "name": "Passwordless access",
+      "status": "observed",
+      "purpose": "Reduce login friction"
+    },
+    {
+      "id": "voice",
+      "name": "Dictation and voice",
+      "status": "observed",
+      "purpose": "Natural delegation"
+    },
+    {
+      "id": "mind_identity",
+      "name": "Mind identity",
+      "status": "observed",
+      "purpose": "Persistent role and presentation"
+    },
+    {
+      "id": "abilities",
+      "name": "Skills and apps",
+      "status": "observed",
+      "purpose": "Specialize agents and connect tools"
+    },
+    {
+      "id": "projects",
+      "name": "Projects",
+      "status": "observed",
+      "purpose": "Private context, chats, files and tasks"
+    },
+    {
+      "id": "taskboard",
+      "name": "Task board",
+      "status": "observed",
+      "purpose": "Supervise delegated work"
+    },
+    {
+      "id": "multi_mind",
+      "name": "Multi-Mind task",
+      "status": "observed",
+      "purpose": "Parallel specialist assignments"
+    },
+    {
+      "id": "dashboard",
+      "name": "Dashboard and recaps",
+      "status": "observed",
+      "purpose": "Measure activity, time, energy and spend"
+    },
+    {
+      "id": "discover",
+      "name": "Discover",
+      "status": "observed",
+      "purpose": "Turn ideas into private or recurring work"
+    },
+    {
+      "id": "modes",
+      "name": "Work and World modes",
+      "status": "observed",
+      "purpose": "Separate policy and context scopes"
+    },
+    {
+      "id": "scheduled_work",
+      "name": "Scheduled agent work",
+      "status": "observed",
+      "purpose": "Recurring proactive services"
+    },
+    {
+      "id": "memory",
+      "name": "Inspectable memory",
+      "status": "observed",
+      "purpose": "Retain and govern context"
+    },
+    {
+      "id": "pods",
+      "name": "Pods",
+      "status": "experimental",
+      "purpose": "Coordinate grouped agents"
+    },
+    {
+      "id": "computer",
+      "name": "Minds Computer",
+      "status": "experimental",
+      "purpose": "Execute in a computer environment"
+    }
+  ]
+}

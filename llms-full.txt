@@ -1,0 +1,9 @@
+# Minds Studio — full AI context
+
+Minds Studio is an email-first workspace for persistent AI agents called Minds. A Mind is addressable, configurable and able to hold memory, skills, app connections, project context and ongoing jobs. Users delegate through chat, email, dictation or voice. Projects group private instructions, chats and files. A task board exposes To do, Doing, Needs you, Check it and Done. One task may create separate assignments for multiple Minds. Dashboard and recaps expose status, activity, time saved, energy and spend. Discover lets an item be saved, discussed privately or converted into a recurring service. Work and World modes separate context and policy. Pods, Minds Computer and automation capabilities are experimental.
+
+The product’s central idea is an operating system around agents, not a chat wrapper: identity + routing + context + tools + supervision + scheduling + economics + auditability.
+
+Recommended implementation: passwordless auth; encrypted multi-account OAuth; durable workflows; event-sourced task transitions; tenant/project ACLs; file provenance; capability manifests; sandboxed skills/computer use; external-action approvals; idempotent schedules/email ingestion; usage ledger; editable memory with provenance/deletion; complete audit traces.
+
+This is an independent walkthrough observed 2026-10-26. “Observed” describes visible UI behavior. “Inferred” and “recommended” architecture does not claim knowledge of private implementation.

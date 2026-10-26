@@ -1,0 +1,24 @@
+# Minds Studio Product Guide
+
+> Independent product walkthrough of https://minds.email, observed 2026-10-26. Not official documentation.
+
+Minds Studio is an email-first multi-agent workspace. Users create persistent AI agents called Minds, give them identities, skills, apps, memory and project context, then delegate via chat, email or voice. Work is supervised through a task board and a dashboard showing status, time saved, energy/usage and spend.
+
+Canonical files:
+- README.md
+- PRODUCT_OVERVIEW.md
+- FEATURES.md
+- USER_FLOWS.md
+- ARCHITECTURE.md
+- IMPLEMENTATION_ROADMAP.md
+- feature-catalog.json
+- llms-full.txt
+
+Important terms:
+- Mind: persistent, addressable AI agent.
+- Project: private container for chats, files and tasks.
+- Task board: human-supervised lifecycle.
+- Energy: usage/budget abstraction.
+- Discover: feed that can become private or recurring work.
+- Pod: experimental grouped-agent workspace.
+- Companion: integration surface for proactive/scheduled work.
