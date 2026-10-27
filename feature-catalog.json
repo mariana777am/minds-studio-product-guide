@@ -1,20 +1,21 @@
 {
   "product": "Minds Studio",
   "url": "https://minds.email",
-  "observed_at": "2026-10-26",
+  "observed_at": "2026-10-27",
   "provenance": "independent authenticated UI walkthrough",
+  "important_clarification": "Minds do not each automatically receive an email address. Mail is part of Work mode; users can manage email manually or delegate email-related work to a Mind.",
   "features": [
     {
-      "id": "email_identity",
-      "name": "Email-first agent identity",
+      "id": "work_mode_mail",
+      "name": "Mail in Work mode",
       "status": "observed",
-      "purpose": "Address and delegate to persistent Minds"
+      "purpose": "Manage and send email manually, or delegate email-related work to a Mind"
     },
     {
       "id": "multi_account",
-      "name": "Multiple accounts",
+      "name": "Multiple connected accounts",
       "status": "observed",
-      "purpose": "Unify personal and work identities"
+      "purpose": "Use personal and work identities in one experience"
     },
     {
       "id": "passwordless",
@@ -26,61 +27,61 @@
       "id": "voice",
       "name": "Dictation and voice",
       "status": "observed",
-      "purpose": "Natural delegation"
+      "purpose": "Delegate naturally"
     },
     {
       "id": "mind_identity",
       "name": "Mind identity",
       "status": "observed",
-      "purpose": "Persistent role and presentation"
+      "purpose": "Give AI collaborators recognizable roles and presentation"
     },
     {
       "id": "abilities",
       "name": "Skills and apps",
       "status": "observed",
-      "purpose": "Specialize agents and connect tools"
+      "purpose": "Specialize Minds and connect tools"
     },
     {
       "id": "projects",
       "name": "Projects",
       "status": "observed",
-      "purpose": "Private context, chats, files and tasks"
+      "purpose": "Hold private context, chats, files and Tasks"
     },
     {
       "id": "taskboard",
-      "name": "Task board",
+      "name": "Taskboard",
       "status": "observed",
       "purpose": "Supervise delegated work"
     },
     {
       "id": "multi_mind",
-      "name": "Multi-Mind task",
+      "name": "Multi-Mind Task",
       "status": "observed",
-      "purpose": "Parallel specialist assignments"
+      "purpose": "Create parallel specialist assignments"
     },
     {
       "id": "dashboard",
       "name": "Dashboard and recaps",
       "status": "observed",
-      "purpose": "Measure activity, time, energy and spend"
+      "purpose": "Understand activity, time, energy and spend"
     },
     {
       "id": "discover",
       "name": "Discover",
       "status": "observed",
-      "purpose": "Turn ideas into private or recurring work"
+      "purpose": "Turn ideas into private conversations or recurring work"
     },
     {
       "id": "modes",
       "name": "Work and World modes",
       "status": "observed",
-      "purpose": "Separate policy and context scopes"
+      "purpose": "Separate focused work from broader exploration"
     },
     {
       "id": "scheduled_work",
       "name": "Scheduled agent work",
       "status": "observed",
-      "purpose": "Recurring proactive services"
+      "purpose": "Run visible recurring services"
     },
     {
       "id": "memory",
@@ -92,13 +93,14 @@
       "id": "pods",
       "name": "Pods",
       "status": "experimental",
-      "purpose": "Coordinate grouped agents"
+      "availability": "Work mode; enable through Settings > Experimental > Pods; current device only",
+      "purpose": "Bring several Minds together as a team"
     },
     {
       "id": "computer",
       "name": "Minds Computer",
       "status": "experimental",
-      "purpose": "Execute in a computer environment"
+      "purpose": "Execute work in a computer environment"
     }
   ]
 }
