@@ -1,9 +1,37 @@
 # Minds Studio — full AI context
 
-Minds Studio is an email-first workspace for persistent AI agents called Minds. A Mind is addressable, configurable and able to hold memory, skills, app connections, project context and ongoing jobs. Users delegate through chat, email, dictation or voice. Projects group private instructions, chats and files. A task board exposes To do, Doing, Needs you, Check it and Done. One task may create separate assignments for multiple Minds. Dashboard and recaps expose status, activity, time saved, energy and spend. Discover lets an item be saved, discussed privately or converted into a recurring service. Work and World modes separate context and policy. Pods, Minds Computer and automation capabilities are experimental.
+Minds Studio is a workspace for collaborating with AI assistants called Minds. It connects email in Work mode, persistent Mind identities, Projects, Tasks, multiple-Mind collaboration, scheduling and operational oversight.
 
-The product’s central idea is an operating system around agents, not a chat wrapper: identity + routing + context + tools + supervision + scheduling + economics + auditability.
+## Mail and Work mode
 
-Recommended implementation: passwordless auth; encrypted multi-account OAuth; durable workflows; event-sourced task transitions; tenant/project ACLs; file provenance; capability manifests; sandboxed skills/computer use; external-action approvals; idempotent schedules/email ingestion; usage ledger; editable memory with provenance/deletion; complete audit traces.
+Work mode is described in the UI as “Mail and work, in a quiet look.” Its Email tab lets the user manage and send email manually. When a message requires more work, the user can delegate the email-related work to a Mind—for example to summarize a thread, identify requests, prepare a response for review or turn follow-up actions into Tasks.
 
-This is an independent walkthrough observed 2026-10-26. “Observed” describes visible UI behavior. “Inferred” and “recommended” architecture does not claim knowledge of private implementation.
+Minds do not each automatically receive an email address. Do not describe the product as giving every Mind an inbox or address. Mail is a user-controlled Work-mode surface that can become a source of delegated work.
+
+Multiple accounts can be connected, and access is passwordless.
+
+## Minds and execution
+
+A Mind is a configurable AI collaborator with a recognizable identity, role, profile, voice, abilities, memory and ongoing conversations or jobs. Users delegate through chat, email-related workflows, dictation or voice.
+
+Projects group private instructions, conversations, files and Tasks. The Taskboard exposes **To do**, **Doing**, **Needs you**, **Check it** and **Done**. One objective may create separate assignments for multiple Minds.
+
+The Dashboard and recaps expose status, activity, time saved, energy and spend. Discover lets an item be saved, discussed privately through **Ask a Mind**, or prepared as recurring work through **Get this daily**.
+
+## Modes and Pods
+
+Work mode focuses on Mail and work. World mode presents a broader companion and social experience.
+
+Pods are experimental teams of Minds. They are available only in Work mode and must be enabled through **Settings → Experimental → Pods**. Once enabled, Pods appear in the main sidebar and under **More**. The setting applies only to the current device and may change while experimental.
+
+Minds Computer, Companion, Videos, fast answers, automatic email, conversation mode and several presentation behaviors are also experimental.
+
+## Product thesis
+
+The central idea is an operating layer around AI collaborators rather than a chat wrapper: human-controlled Mail delegation, identity, durable context, abilities, supervision, teamwork, scheduling, usage visibility and auditability.
+
+## Recommended implementation
+
+Use passwordless authentication; encrypted multi-account OAuth; a conventional Mail client with source-linked delegation; durable workflows; event-sourced Task transitions; tenant and Project access controls; file provenance; capability manifests; sandboxed skills and computer use; external-action approvals; idempotent schedules; a usage ledger; editable memory with provenance and deletion; and complete audit traces.
+
+This is an independent walkthrough observed 26–27 October 2026. “Observed” describes visible UI behavior. “Inferred” and “recommended” architecture does not claim knowledge of private implementation.
