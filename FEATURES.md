@@ -1,12 +1,14 @@
 # Feature guide
 
-Each section describes observed behavior and a recommended implementation pattern.
+Each section separates visible product behavior from a recommended implementation pattern.
 
-## Email, multi-account and passwordless access
+## Mail in Work mode, connected accounts and passwordless access
 
-**Observed:** email is both an access method and a work channel. Multiple connected accounts can be consolidated.
+**Observed:** Work mode is described as “Mail and work, in a quiet look.” Its Email tab lets the user manage and send email manually. Email-related work can also be delegated to a Mind. Multiple accounts can be connected, and access is passwordless.
 
-**Implement:** use magic links or passkeys; maintain one encrypted provider connection per identity; normalize inbound email through a routing service; map aliases to Mind IDs; thread by provider message IDs; require confirmation before external sends.
+Minds do not each automatically receive an email address. Mail belongs to the Work experience; the user chooses when to handle communication manually and when to ask a Mind for help.
+
+**Implement:** provide a conventional mail client backed by encrypted provider connections. Preserve account identity, threading and attachments. A delegation action should create a reviewable job linked to the source message and, when selected, its Project. Keep external sending under clear user control and log the resulting action.
 
 ## Dictation and voice
 
@@ -16,60 +18,72 @@ Each section describes observed behavior and a recommended implementation patter
 
 ## Mind identity
 
-**Observed:** a Mind can be enabled/paused, favorited, assigned a character/profile/voice/circle and configured for send-as behavior. Energy is visible.
+**Observed:** a Mind can be enabled or paused, favorited and assigned a character, profile, voice and circle. Energy is visible.
 
-**Implement:** store versioned profiles; separate presentation from system policy; scope credentials per Mind; enforce pause at scheduler/tool gateway; expose quotas through a budget ledger.
+**Implement:** store versioned profiles; separate presentation from system policy; scope credentials per Mind; enforce pause at the scheduler and tool gateway; expose quotas through a budget ledger.
 
 ## Skills and apps
 
-**Observed:** Abilities has Skills and Apps with search, categories, Added/Explore/Usage states and skill building.
+**Observed:** Abilities has Skills and Apps with search, categories, Added, Explore and Usage states, plus skill building.
 
 **Implement:** capability manifests should declare inputs, permissions and versions. Use OAuth for apps, sandbox skills, show grants before activation and log every tool call, result and cost.
 
 ## Projects
 
-**Observed:** projects contain private descriptions/context, chats and files. Context can be attached to a Mind conversation; files have privacy controls; tasks can be filtered by project.
+**Observed:** Projects contain private descriptions and context, chats, files and Tasks. Project context can be used in a Mind conversation, and Tasks can be filtered by Project.
 
-**Implement:** tenant-scoped containers, project ACLs, versioned instructions, retrieval with source citations, and project IDs propagated to every chat, job and artifact.
+**Implement:** use tenant-scoped containers, Project access controls, versioned instructions, retrieval with source citations and Project IDs propagated to every chat, job and artifact.
 
-## Task board
+## Taskboard
 
-**Observed:** states are **To do**, **Doing**, **Needs you**, **Check it** and **Done**. Replies and agent activity move cards; the human decides completion.
+**Observed:** states are **To do**, **Doing**, **Needs you**, **Check it** and **Done**. Replies and Mind activity move cards; the human decides completion.
 
-**Implement:** an event-sourced state machine with idempotent transitions, separate agent/human status, a complete audit log and notifications only at actionable boundaries.
+**Implement:** use an event-sourced state machine with idempotent transitions, separate Mind and human status, a complete audit log and notifications only at actionable boundaries.
 
-## Multi-Mind tasks
+## Multi-Mind Tasks
 
-**Observed:** one task can be sent to several Minds; each assignment receives its own card and can include a due date, project and email dispatch.
+**Observed:** one objective can be assigned to several Minds; each assignment receives its own card and can include a due date and Project.
 
-**Implement:** a parent objective plus one child assignment per Mind; independent execution; synthesis step; deduplicated shared actions; per-agent progress, cost and failure state.
+**Implement:** create a parent objective plus one child assignment per Mind, independent execution, an optional synthesis step, deduplicated shared actions and per-Mind progress, cost and failure state.
 
 ## Dashboard and recaps
 
-**Observed:** waiting/on-job/quiet status, total Minds, time saved, energy used/left, project activity and spend by Mind/action. Recaps summarize day/week and value versus cost.
+**Observed:** the Dashboard shows waiting, on-job and quiet status, total Minds, time saved, energy used or left, Project activity and spend. Recaps summarize day or week activity and value.
 
-**Implement:** normalized telemetry, asynchronous aggregates, explicit measured versus estimated time, confidence on ROI, and drill-down from totals to source events.
+**Implement:** normalize telemetry, calculate aggregates asynchronously, distinguish measured from estimated time, show confidence on value estimates and allow totals to be traced to source events.
 
 ## Discover
 
-**Observed:** categories, like, comment, listen, share and save. “Ask a Mind” copies an item into private chat; “Get this daily” creates a recurring service.
+**Observed:** Discover has categories and social actions. **Ask a Mind** brings an item into a private conversation. **Get this daily** opens a recurring Task and schedule setup that can be reviewed before activation.
 
-**Implement:** separate public feed objects from private execution; explicit publish; copy only selected content; represent recurring services as editable schedules with owner, inputs, destination and failure policy.
+**Implement:** separate public feed objects from private execution, require explicit publishing, copy only selected content and represent recurring services as editable schedules with owner, inputs, destination and failure policy.
 
 ## Work and World modes
 
-Treat modes as policy/context scopes, not themes: each mode defines allowed data, tools, notifications, publishing defaults and retention.
+**Observed:** Work mode brings together Mail and work in a quiet interface. World mode presents Minds as companions for a broader and more social experience. The selected mode applies on the current device.
 
-## Pods, Minds Computer and experiments
+**Implement:** treat modes as policy and context scopes rather than visual themes. Each mode should define allowed data, tools, notifications, publishing defaults and retention.
 
-Observed experiments include Pods, Videos, fast answers, Minds Computer, automatic email, Companion, while-you-wait, memory, voice conversation, vibe matching and effects.
+## Pods
 
-Gate with feature flags; isolate computer sessions; show action previews/approvals; rate-limit autonomous loops; preserve replayable traces and prominent stop controls.
+**Observed:** Pods are an experimental, device-specific feature for “Your Minds, working as a team.” They are available only in Work mode. Enable them through **Settings → Experimental → Pods**; once enabled, Pods appear in the main sidebar and under **More**.
+
+**Implement:** model a Pod as a shared objective with selected Minds, explicit roles, shared context and individual execution records. Gate it with a feature flag and make membership, progress and synthesized output visible.
+
+## Minds Computer and other experiments
+
+**Observed:** other experimental options include Videos, fast answers, Minds Computer, automatic email, Companion, while-you-wait suggestions, memory, conversation mode, vibe matching and visual effects. Their scope varies between account-wide and device-only settings.
+
+**Implement:** isolate computer sessions, show action previews and approvals, rate-limit autonomous loops, preserve replayable traces and provide prominent stop controls.
 
 ## Scheduled agent work
 
-Use a durable scheduler and queue; store timezone; make jobs idempotent; implement retry/backoff and dead-letter handling; notify only on failure, required input or meaningful completion; allow pause/edit/run-now.
+**Observed:** recurring work can be created from surfaces such as **Get this daily**, with a Task, responsible Mind and schedule reviewed before activation.
+
+**Implement:** use a durable scheduler and queue, store timezone, make jobs idempotent, implement retry and backoff, notify only on failure, required input or meaningful completion, and allow pause, edit and run-now.
 
 ## Memory
 
-Users can inspect, correct, forget and download memory. Separate conversation context, project knowledge and user memory; attach provenance/timestamps; allow source-level deletion; rebuild indexes after correction.
+**Observed:** users can inspect, correct and download what Minds know about them.
+
+**Implement:** separate conversation context, Project knowledge and user memory; attach provenance and timestamps; allow source-level deletion; rebuild indexes after correction.
