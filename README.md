@@ -1,38 +1,43 @@
 # Minds Studio — Product Guide
 
-An independent, screenshot-backed guide to **Minds Studio**, an email-first workspace for delegating work to persistent AI agents (“Minds”). Written for both humans and AI crawlers.
+An independent, screenshot-backed guide to **Minds Studio**, a workspace that brings together email, AI collaborators (“Minds”), Projects, Tasks and recurring work. Written for both humans and AI crawlers.
 
-> Observed on 26 October 2026 at https://minds.email. This is not official documentation and is not affiliated with Minds Studio or Animoca Brands. Product behavior may change.
+> Observed on 26–27 October 2026 at https://minds.email. This is not official documentation and is not affiliated with Minds Studio or Animoca Brands. Product behavior may change.
 
 ## The product in one sentence
 
-Minds Studio turns AI agents into addressable teammates: each Mind has an identity, inbox, memory, abilities, project context and measurable work history; users assign jobs through chat, email and voice, coordinate several Minds on a task board, and supervise recurring work from a dashboard.
+Minds Studio lets users manage email in Work mode, delegate email-related work or other objectives to specialized Minds, organize durable context in Projects, supervise progress on a Taskboard and run useful recurring work with visible human review.
+
+## Start with the product introduction
+
+Read **[Meet Minds Studio: Build an AI Team That Actually Gets Work Done](PRODUCT_INTRODUCTION.md)** for a friendly, non-technical introduction with screenshots and a first-day workflow.
 
 ## What matters most
 
 | Capability | Purpose |
 |---|---|
-| Email-first identity | Delegate by forwarding real work to a persistent Mind |
+| Mail in Work mode | Read and send email manually, or delegate the work inside a message to a Mind |
 | Multiple accounts | Operate across personal and work identities |
 | Passwordless access | Reduce onboarding and credential friction |
 | Dictation and voice | Delegate naturally and accessibly |
-| Mind identity | Configure role, character, voice, circle and send-as behavior |
-| Projects | Hold private context, conversations, files and tasks |
-| Task board | Track To do → Doing → Needs you → Check it → Done |
-| Multi-Mind tasks | Give one objective to several specialists with separate cards |
+| Mind identity | Give AI collaborators recognizable roles, profiles and voices |
+| Projects | Hold private context, conversations, files and Tasks |
+| Taskboard | Track To do → Doing → Needs you → Check it → Done |
+| Multi-Mind Tasks | Give one objective to several specialists with separate cards |
 | Dashboard and recaps | Show status, time saved, energy, activity and spend |
 | Discover | Turn shared ideas into private chats or recurring services |
-| Work / World modes | Separate policy, context and intent |
-| Pods and Minds Computer | Extend agents into coordinated and computer-based execution |
-| Scheduled work | Run durable recurring services through apps and Companion |
-| Skills, apps and memory | Specialize agents and retain governed context |
+| Work / World modes | Separate focused work from broader exploration |
+| Pods | Bring several Minds together as a team in Work mode |
+| Scheduled work | Run visible recurring services |
+| Skills, apps and memory | Specialize Minds and retain governed context |
 
 ## Core operating loop
 
-Connect identity → configure a Mind → add skills/apps/project context → delegate by chat, email or voice → track on the task board → provide input or approve results → reuse, remember or schedule.
+Connect an account → choose or configure a Mind → add Project context → delegate by chat, email, dictation or voice → track progress on the Taskboard → provide input or approve results → reuse or schedule the workflow.
 
 ## Documentation
 
+- [Social product introduction](PRODUCT_INTRODUCTION.md)
 - [Product overview](PRODUCT_OVERVIEW.md)
 - [Feature guide](FEATURES.md)
 - [User flows](USER_FLOWS.md)
@@ -41,11 +46,11 @@ Connect identity → configure a Mind → add skills/apps/project context → de
 - [Presentation outline](PRESENTATION_OUTLINE.md)
 - [Machine-readable feature catalog](feature-catalog.json)
 - [AI crawler summary](llms.txt) and [full AI context](llms-full.txt)
-- [Screenshot gallery](screenshots/)
+- [Screenshot gallery](assets/screenshots/)
 
 ## Screenshot tour
 
-See the [screenshot gallery](screenshots/) for Minds chat, multiple accounts, Pods/computer use, dashboard, task board, multi-Mind tasks, projects, Discover, Mind identity, abilities and voice.
+See the [screenshot gallery](assets/screenshots/) for Minds, connected accounts and modes, Pods, Dashboard, Taskboard, Multi-Mind Tasks, Projects, Discover, Mind identity, abilities and voice.
 
 ## Reading this repository correctly
 
@@ -53,3 +58,4 @@ See the [screenshot gallery](screenshots/) for Minds chat, multiple accounts, Po
 - **Inferred** means a reasonable implementation pattern, not a claim about private code.
 - **Recommended** means guidance for building a comparable system.
 - Experimental features should not be assumed production-stable.
+- Minds do not each automatically receive an email address; Mail is part of Work mode and email-related work can be delegated to a Mind.
