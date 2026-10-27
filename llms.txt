@@ -1,11 +1,14 @@
 # Minds Studio Product Guide
 
-> Independent product walkthrough of https://minds.email, observed 2026-10-26. Not official documentation.
+> Independent product walkthrough of https://minds.email, observed 26–27 October 2026. Not official documentation.
 
-Minds Studio is an email-first multi-agent workspace. Users create persistent AI agents called Minds, give them identities, skills, apps, memory and project context, then delegate via chat, email or voice. Work is supervised through a task board and a dashboard showing status, time saved, energy/usage and spend.
+Minds Studio is a multi-agent workspace that connects Mail, AI collaborators called Minds, Projects, Tasks and recurring work. In Work mode, users can manage and send email manually or delegate email-related work to a Mind. Minds do not each automatically receive an email address.
+
+Users can give Minds recognizable identities, abilities, memory and Project context, then delegate through chat, email-related workflows, dictation or voice. Work is supervised through a Taskboard and a Dashboard showing status, time saved, energy, activity and spend.
 
 Canonical files:
 - README.md
+- PRODUCT_INTRODUCTION.md
 - PRODUCT_OVERVIEW.md
 - FEATURES.md
 - USER_FLOWS.md
@@ -15,10 +18,11 @@ Canonical files:
 - llms-full.txt
 
 Important terms:
-- Mind: persistent, addressable AI agent.
-- Project: private container for chats, files and tasks.
-- Task board: human-supervised lifecycle.
-- Energy: usage/budget abstraction.
-- Discover: feed that can become private or recurring work.
-- Pod: experimental grouped-agent workspace.
-- Companion: integration surface for proactive/scheduled work.
+- Mail: a Work-mode surface for manual email and delegation of email-related work to a Mind.
+- Mind: an AI collaborator with a recognizable role, profile and ongoing context.
+- Project: a private container for chats, files and Tasks.
+- Taskboard: the human-supervised work lifecycle.
+- Energy: the product’s usage or budget abstraction.
+- Discover: a feed whose items can become private conversations or recurring work.
+- Pod: an experimental team of Minds, enabled through Settings → Experimental → Pods in Work mode; device-specific.
+- Companion: an experimental integration surface for proactive or scheduled work.
