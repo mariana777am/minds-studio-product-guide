@@ -1,25 +1,25 @@
 # Implementation roadmap
 
-## Phase 1 — trustworthy single-agent workspace
+## Phase 1 — trustworthy single-Mind workspace
 
-Passwordless auth, one Mind, streaming chat, attachments, basic project context, task states, audit log and limits. Exit when a user can delegate, inspect progress and approve output without hidden side effects.
+Passwordless access, one Mind, streaming chat, attachments, basic Project context, Task states, audit log and limits. Exit when a user can delegate, inspect progress and approve output without hidden side effects.
 
-## Phase 2 — addressability and specialization
+## Phase 2 — Work-mode Mail and specialization
 
-Inbound/outbound email, multiple identities, configurable profiles, skill/app manifests, OAuth connections, dictation/voice and editable memory. Add permission previews and revocation.
+Add a conventional Mail experience with multiple connected accounts and manual composition and sending. Let a user delegate the work inside a selected email to a Mind while preserving the source thread, attachments and chosen Project. Add configurable Mind profiles, skill and app manifests, OAuth connections, dictation, voice and editable memory. Keep external sending separate from draft generation, with permission previews and revocation.
 
-## Phase 3 — projects and multi-agent work
+## Phase 3 — Projects and multi-Mind work
 
-Project ACLs, file provenance/citations, multi-Mind child assignments, synthesis, due dates, notifications and dashboard telemetry. Make every job durable and resumable.
+Add Project access controls, file provenance and citations, Multi-Mind child assignments, optional synthesis, due dates, notifications and Dashboard telemetry. Make every job durable and resumable.
 
 ## Phase 4 — proactive services
 
-Recurring schedules, Discover templates, Companion destinations, retries, dead-letter handling, timezone support, pause/edit/run-now and meaningful-notification policies.
+Add recurring schedules, Discover templates, Companion destinations, retries, dead-letter handling, timezone support, pause, edit, run-now and meaningful-notification policies.
 
-## Phase 5 — advanced execution
+## Phase 5 — advanced team execution
 
-Pods and computer use behind feature flags. Require sandboxing, action previews, scoped credentials, human approvals, replayable traces and emergency stops.
+Add Pods and Minds Computer behind feature flags. Model a Pod as a shared objective with selected Minds, explicit roles, shared context and individual execution records. Require sandboxing, action previews, scoped credentials, human approvals, replayable traces and emergency stops.
 
 ## Cross-cutting work
 
-Threat-model email injection, malicious documents and compromised integrations. Add evaluations for success, groundedness, tool safety and cost; accessibility; data export/deletion; memory correction; transparent time/value estimates.
+Threat-model malicious email and document content, prompt injection and compromised integrations. Add evaluations for success, groundedness, tool safety and cost; accessibility; data export and deletion; memory correction; and transparent time and value estimates.
